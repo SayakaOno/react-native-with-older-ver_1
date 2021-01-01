@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView} from 'react-native';
 import axios from 'axios';
 import AlbumDetail from '../components/AlbumDetail';
 
@@ -18,7 +18,7 @@ const AlbumList = () => {
     return albums.map(album => <AlbumDetail key={album.title} album={album} />);
   };
 
-  return <View>{renderAlbums()}</View>;
+  return <ScrollView>{renderAlbums()}</ScrollView>;
 };
 
 export default AlbumList;
